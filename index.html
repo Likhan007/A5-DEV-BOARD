@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Assignment</title>
+  </head>
+  <body class="poppins-regular bg-slate-200"> 
+    <!-- header -->
+    <header class="bg-white rounded-2xl px-6 py-5 my-6 mx-36">
+        <nav class="flex justify-between items-center">
+            <div class="flex gap-3 items-center">
+                <img src="assets/logo.png" alt="">
+                <h1 class="text-4xl">Dev<b>Board</b></h1>
+            </div>
+ 
+            <div class="flex gap-8 items-center">
+                <div class="bg-slate-200 rounded-3xl px-4 py-2 flex items-center gap-3">
+                    <img src="assets/main_checkbox.png" alt="" class="">
+                    <h3 class="text-3xl font-bold" id="completedTask">23</h3>
+                </div>
+ 
+                <img src="assets/theme-btn.png" alt="" onclick="generateNewColor()">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body Grid layout -->
+    <main class="mx-36">
+        <div class="flex gap-5"> 
+            <!-- left  box-->
+            <div class="bg-white rounded-3xl w-[75%]">
+                
+                <div class="grid grid-cols-4 ">
+                    <div class="flex p-5 gap-5 bg-slate-200 m-6 rounded-2xl items-center">
+                        <img src="./assets/checkbox.png" alt="" class="w-16 h-16">
+                        <div>
+                            <p class="text-lg">Task Assigned</p>
+                            <h1 class="font-bold text-3xl" id="pendingTask">06</h1>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center bg-gradient-to-r from-blue-700 to-blue-300 m-6 rounded-2xl pl-10 py-5 col-span-2 gap-6 cursor-pointer" id="discover">
+                        <img src="./assets/board.png" alt="" class="object-contain">
+                        <div class="text-white line text-2xl">
+                            <p>Discover Something</p>
+                            <p>New Today!</p>
+                        </div>
+                    </div>
+
+                    <div class="flex p-5 gap-5 bg-slate-200 m-6 rounded-2xl items-center">
+                        <img src="./assets/calender.png" alt="" class="w-16 h-16">
+                        <div class="text-xl">
+                            <p class="" id="calenderDivDay">Wed,</p>
+                            <h1 class="font-bold" id="calenderDivDate">Jul 28 2025</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-dashed">
+
+                <!-- 6 grid boxes -->
+
+                <div class="grid grid-cols-3 mx-6 gap-6 my-6">
+                    <!-- box1 -->
+                    <div class="bg-slate-200 rounded-3xl p-6">
+                        <p class="bg-white w-fit px-3 py-2 rounded-lg">ShopEase</p>
+                        <h1 class="text-2xl font-medium my-4">Fix Mobile Button Issue</h1>
+                        <div class="bg-white rounded-lg p-4">
+                            <p class="line-clamp-2 text-slate-500">
+                                Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                            </p>
+                        </div>
+                        <hr class="border border-dashed border-blue-300 my-5">
+                        <div class="flex justify-end">
+                            <div>
+                                <p class="text-slate-500 ">Deadline</p>
+                                <p class="font-medium">21 March 2025</p>
+                            </div>
+                            <button onclick="alert('Board Updated Successfully')" class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6 block completedBtn">Completed</button>
+                        </div>
+                    </div>  
+
+
+                    <!-- box2 -->
+                    <div class="bg-slate-200 rounded-3xl p-6 ">
+                        <p class="bg-white w-fit px-3 py-2 rounded-lg">CloudSync</p>
+                        <h1 class="text-2xl font-medium my-4">Fix Add Dark Mode</h1>
+                        <div class="bg-white rounded-lg p-4">
+                            <p class="line-clamp-2 text-slate-500">
+                                Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                            </p>
+                        </div>
+                        <hr class="border border-dashed border-blue-300 my-5">
+                        <div class="flex justify-end">
+                            <div>
+                                <p class="text-slate-500 ">Deadline</p>
+                                <p class="font-medium">21 March 2025</p>
+                            </div>
+                            <button onclick="alert('Board Updated Successfully')" class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6 block completedBtn">Completed</button>
+                        </div>
+                    </div>  
+
+
+                    <!-- box3 -->
+                    <div class="bg-slate-200 rounded-3xl p-6 ">
+                        <p class="bg-white w-fit px-3 py-2 rounded-lg">SwiftPay</p>
+                        <h1 class="text-2xl font-medium my-4">Optimize  Home page</h1>
+                        <div class="bg-white rounded-lg p-4">
+                            <p class="line-clamp-2 text-slate-500">
+                                Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            </p>
+                        </div>
+                        <hr class="border border-dashed border-blue-300 my-5">
+                        <div class="flex justify-end">
+                            <div>
+                                <p class="text-slate-500 ">Deadline</p>
+                                <p class="font-medium">21 March 2025</p>
+                            </div>
+                            <button onclick="alert('Board Updated Successfully')" class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6 block completedBtn">Completed</button>
+                        </div>
+                    </div>  
+
+
+                    <!-- box4 -->
+                    <div class="bg-slate-200 rounded-3xl p-6 ">
+                        <p class="bg-white w-fit px-3 py-2 rounded-lg">Meta</p>
+                        <h1 class="text-2xl font-medium my-4">Add new emoji 🤲</h1>
+                        <div class="bg-white rounded-lg p-4">
+                            <p class="line-clamp-2 text-slate-500">
+                                Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            </p>
+                        </div>
+                        <hr class="border border-dashed border-blue-300 my-5">
+                        <div class="flex justify-end">
+                            <div>
+                                <p class="text-slate-500 ">Deadline</p>
+                                <p class="font-medium">21 March 2025</p>
+                            </div>
+                            <button onclick="alert('Board Updated Successfully')" class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6 block completedBtn">Completed</button>
+                        </div>
+                    </div>  
+
+
+                    <!-- box5 -->
+                    <div class="bg-slate-200 rounded-3xl p-6 ">
+                        <p class="bg-white w-fit px-3 py-2 rounded-lg">Google LLC</p>
+                        <h1 class="text-2xl font-medium my-4">Integrate OpenAI API</h1>
+                        <div class="bg-white rounded-lg p-4">
+                            <p class="line-clamp-2 text-slate-500">
+                                Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                            </p>
+                        </div>
+                        <hr class="border border-dashed border-blue-300 my-5">
+                        <div class="flex justify-end">
+                            <div>
+                                <p class="text-slate-500 ">Deadline</p>
+                                <p class="font-medium">21 March 2025</p>
+                            </div>
+                            <button onclick="alert('Board Updated Successfully')"  class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6 block completedBtn">Completed</button>
+                        </div>
+                    </div>  
+
+
+
+                    <!-- box6 -->
+                    <div class="bg-slate-200 rounded-3xl p-6 ">
+                        <p class="bg-white w-fit px-3 py-2 rounded-lg">Glassdoor</p>
+                        <h1 class="text-2xl font-medium my-4">Improve Job searching </h1>
+                        <div class="bg-white rounded-lg p-4">
+                            <p class="line-clamp-2 text-slate-500">
+                                Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                            </p>
+                        </div>
+                        <hr class="border border-dashed border-blue-300 my-5">
+                        <div class="flex justify-end">
+                            <div>
+                                <p class="text-slate-500 ">Deadline</p>
+                                <p class="font-medium">21 March 2025</p>
+                            </div>
+                            <button onclick="alert('Board Updated Successfully')"  class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6 block completedBtn">Completed</button>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+    
+            <!-- right box (activity)-->
+            <div class="flex-1 bg-white rounded-3xl flex flex-col px-5 pb-6" id="activityLogs">
+                <div class=" flex justify-center gap-2 my-6">
+                    <img src="./assets/activity.png" alt="" class="object-contain">
+                    <p class="text-xl">Activity Log</p>
+                </div>
+
+                <button class="bg-blue-600 text-white text-lg px-5 py-3 rounded-lg w-fit mx-auto mb-6" id="clearHistorybtn">Clear History</button>
+
+                <hr class="border-dashed">
+                <!-- tasks are shown here -->
+                <div id="taskContainer">
+                    
+                </div>
+
+                <!-- <p class="bg-slate-200 text-lg p-2 rounded-md mt-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, quo?</p> -->
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
